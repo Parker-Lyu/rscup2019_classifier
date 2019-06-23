@@ -34,3 +34,6 @@ data_dir/
     |->test
     |->ClsName2id.txt
 ```
+
+## tensorboard
+![](https://raw.githubusercontent.com/Parker-Lyu/rscup2019_classifier_baseline/blob/master/train.png)
