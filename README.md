@@ -10,19 +10,24 @@ rscup2019，classifier challenge, baseline
 This baseline got 0.893
 
 ## Requirements
+
 pytorch==1.1 (1.0 should OK)
+
 tensorboard==1.8
+
 tensorboardX==1.7
+
 pillow
 
 Memory>=8G
+
 GPU=1080Ti 
 
 ## Usage
 The simplest way to use it is simply to specify the data_dir parameter. You will get 0.893 after 85m, also you will get log and tensorboard_log.
-'''
+```
 python train_resnet.py --data_dir your_data_dir
-'''
+```
 
 your data dir should be organized as follows:
 ```
