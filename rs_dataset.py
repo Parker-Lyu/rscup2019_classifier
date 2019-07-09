@@ -21,15 +21,6 @@ import random
 class RSDataset(Dataset):
     def __init__(self, rootpth='E:\Zip&Data\dataset\\rscup',des_size=(224,224),mode='train', ):
 
-        '''
-
-        :param rootpth: 根目录
-        :param re_size: 数据同一resize到这个尺寸再后处理
-        :param crop_size: 剪切
-        :param erase: 遮罩比例
-        :param mode: train/val/test
-        '''
-
         self.des_size = des_size
         self.mode = mode
 
@@ -69,6 +60,36 @@ class RSDataset(Dataset):
 
     def __len__(self):
         return len(self.file_names)
+
+
+class InferDataset(Dataset):
+    def __init__(self, rootpth='C:\\dataset\\rscup', dsize = (224,224)):
+        self.dsize=dsize
+        # 读取文件名称
+        self.file_names = []
+        for root, dirs, names in os.walk(osp.join(rootpth, 'test')):
+            for name in names:
+                self.file_names.append(osp.join(root, name))
+
+        # 确定分隔符号
+        self.split_char = '\\' if '\\' in self.file_names[0] else '/'
+
+        self.base_names = [osp.split(name)[1] for name in self.file_names]
+
+        self.to_tensor = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+        ])
+
+    def __len__(self):
+        return len(self.base_names)
+
+    def __getitem__(self, idx):
+        file_name = self.file_names[idx]
+        base_name = self.base_names[idx]
+
+        img = Image.open(file_name)
+        return self.to_tensor(img),base_name
 
 if __name__ == '__main__':
     aaa = RSDataset(rootpth='C:\dataset\\rscup',mode='val')
