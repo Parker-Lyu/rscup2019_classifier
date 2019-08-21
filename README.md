@@ -8,14 +8,14 @@ rscup2019，分类赛道 baseline
 0.9387
 
 ## tricks
-[x] dataAug
-[x] pretrain
-[x] warmup
-[x] 余弦退火
-[x] 仅对conv层及FC层的乘权重进行权重衰减
-[x] mixup
-[ ] mean-teacher(测试中）
-[ ] fast-autoAugment
+- [x] dataAug
+- [x] pretrain
+- [x] warmup
+- [x] 余弦退火
+- [x] 仅对conv层及FC层的乘权重进行权重衰减
+- [x] mixup
+- [ ] mean-teacher(测试中）
+- [ ] fast-autoAugment
 
 
 ## 一些经验
@@ -64,4 +64,4 @@ data_dir/
 ```
 
 ## tensorboard
-![](https://github.com/Parker-Lyu/rscup2019_classifier/baseline/blob/master/train.png)
+![](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/train.png)

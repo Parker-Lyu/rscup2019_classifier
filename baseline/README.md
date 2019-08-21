@@ -1,7 +1,7 @@
 # rscup2019_classifier
 rscup2019，classifier challenge, baseline
 
-[中文版本](https://github.com/Parker-Lyu/rscup2019_classifier/baseline/blob/master/README_CN.md)
+[中文版本](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/baseline/README_CN.md)
 
 ## Introduction
 [RSCUP: 遥感图像场景分类](http://rscup.bjxintong.com.cn/#/theme/1)
