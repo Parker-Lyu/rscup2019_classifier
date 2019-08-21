@@ -1,7 +1,7 @@
 # rscup2019_classifier
 rscup2019，分类赛道 baseline
 
-[English](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/README.md)
+[English](https://github.com/Parker-Lyu/rscup2019_classifier/baseline/blob/master/README.md)
 
 ## 简介
 [RSCUP: 遥感图像场景分类](http://rscup.bjxintong.com.cn/#/theme/1)
@@ -36,4 +36,4 @@ data_dir/
 ```
 
 ## tensorboard
-![](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/train.png)
+![](https://github.com/Parker-Lyu/rscup2019_classifier/baseline/blob/master/train.png)

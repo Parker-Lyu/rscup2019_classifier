@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 @File    : infer.py
-@Time    : 2019/7/1 7:39
+@Time    : 2019/7/9 22:04
 @Author  : Parker
 @Email   : now_cherish@163.com
 @Software: PyCharm
 @Des     : 
 """
-
 
 import torch
 import torch.nn as nn
@@ -26,7 +25,7 @@ import os.path as osp
 
 from rs_dataset import RSDataset,InferDataset
 from get_logger import get_logger
-from networks import Dense201
+from res_network import Resnet34
 
 def parse_args():
     parse = argparse.ArgumentParser()
@@ -34,9 +33,8 @@ def parse_args():
     parse.add_argument('--num_workers', type=int, default=8)
 
     parse.add_argument('--data_dir',type=str,default='C:\dataset\\rscup')
-    parse.add_argument('--model_out_name',type=str,default='./model_out/190810-200202_dense201_pre_warm_de_cos_mix/final_model.pth')
+    parse.add_argument('--model_out_name',type=str,default='./model_out/190706-192015_dense201_pre_aug/final_model.pth')
 
-    parse.add_argument('--result_name',type=str,default='result.txt')
     return parse.parse_args()
 
 
@@ -48,7 +46,7 @@ def main_worker(args):
                              pin_memory=True)
 
 
-    net = Dense201()
+    net = Resnet34()
 
     net.load_state_dict(torch.load(args.model_out_name))
 
@@ -72,6 +70,8 @@ def main_worker(args):
 
     print('----------Done!----------')
 
+
+# 用于测试验证集
 def evaluate_val(args):
     val_set = RSDataset(rootpth=args.data_dir, mode='val')
     val_loader = DataLoader(val_set,
@@ -81,7 +81,7 @@ def evaluate_val(args):
                             pin_memory=True,
                             num_workers=args.num_workers)
 
-    net = Dense201()
+    net = Resnet34()
 
     net.load_state_dict(torch.load(args.model_out_name))
 
@@ -108,5 +108,6 @@ def evaluate_val(args):
 
 if __name__ == '__main__':
     args = parse_args()
+    # 推理测试集
     main_worker(args)
     # evaluate_val(args)
