@@ -39,4 +39,4 @@ data_dir/
 ```
 
 ## tensorboard
-![](https://github.com/Parker-Lyu/rscup2019_classifier/baseline/blob/master/train.png)
+![](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/baseline/train.png)

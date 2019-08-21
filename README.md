@@ -8,14 +8,14 @@ rscup2019，分类赛道 baseline
 0.9387
 
 ## tricks
-- [x] dataAug
-- [x] pretrain
-- [x] warmup
-- [x] 余弦退火
-- [x] 仅对conv层及FC层的乘权重进行权重衰减（此部分不确定是不是写错了，希望大佬指正）
-- [x] mixup
-- [ ] mean-teacher(测试中）
-- [ ] fast-autoAugment
+[x] dataAug
+[x] pretrain
+[x] warmup
+[x] 余弦退火
+[x] 仅对conv层及FC层的乘权重进行权重衰减
+[x] mixup
+[ ] mean-teacher(测试中）
+[ ] fast-autoAugment
 
 
 ## 一些经验
@@ -28,7 +28,7 @@ rscup2019，分类赛道 baseline
 - [ ] train.py  line174-184, 本意是写仅对conv及FC的W进行权重衰减，但是不确定是否漏掉了params没有进行优化
 - [ ] rs_dataset.py line184-201 计算数据集统计指标的方式不知道是否正确
 - [ ] 分类问题中，拿到混淆矩阵，对容易分错的两个类如何处理？
-- [ ] 数据均衡该如何做？
+- [ ] 数据均衡该如何做？train.py 中注释掉的代码是为了数据均衡写的，但是有负面效果
 
 
 ## 依赖
