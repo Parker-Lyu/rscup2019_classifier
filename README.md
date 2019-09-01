@@ -16,8 +16,10 @@ rscup2019，分类赛道 baseline
 - [x] mixup
 - [ ] label-smooth（感觉mixup已经有平滑标签的作用了，label-smooth不知道还有没有用）   
 - [ ] mean-teacher(测试中）
-- [ ] fast-autoAugment
-
+- [ ] fast-autoAugment    
+- [ ] SWA https://pytorch.org/blog/stochastic-weight-averaging-in-pytorch/    
+- [ ] RAdam  
+- [ ] 半监督学习 https://github.com/benathi/fastswa-semi-sup
 
 ## 一些经验
 - 如果要增大batchsize（土豪多卡），根据一些论文，lr和batchsize保持同比例缩放即可    
