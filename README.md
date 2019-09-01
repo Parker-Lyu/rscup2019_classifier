@@ -65,3 +65,6 @@ data_dir/
 
 ## tensorboard
 ![](https://github.com/Parker-Lyu/rscup2019_classifier/blob/master/train.png)
+
+## 其他大佬的分享
+丶favor  TOP3  [传送门](https://zhuanlan.zhihu.com/p/80704400)
