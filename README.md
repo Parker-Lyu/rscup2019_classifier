@@ -14,6 +14,7 @@ rscup2019，分类赛道 baseline
 - [x] 余弦退火
 - [x] 仅对conv层及FC层的乘权重进行权重衰减
 - [x] mixup
+- [ ] label-smooth（感觉mixup已经有平滑标签的作用了，label-smooth不知道还有没有用）   
 - [ ] mean-teacher(测试中）
 - [ ] fast-autoAugment
 
